@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+    change-log: db/changelog/master.xml
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    stream:
+      username: guest
+      password: guest
+
+
+server:
+  port: 8080
